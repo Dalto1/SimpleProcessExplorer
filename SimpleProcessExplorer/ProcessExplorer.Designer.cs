@@ -1,7 +1,7 @@
 ﻿
 namespace ProcessExplorer
 {
-    partial class Form1
+    partial class ProcessExplorer
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@ namespace ProcessExplorer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessExplorer));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@ namespace ProcessExplorer
             this.button3.TabIndex = 11;
             this.button3.Text = "Fermer l\'application";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.KillButton);
             // 
             // button2
             // 
@@ -79,7 +79,7 @@ namespace ProcessExplorer
             this.button2.TabIndex = 10;
             this.button2.Text = "Quitter";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.QuitButton);
             // 
             // button1
             // 
@@ -90,9 +90,9 @@ namespace ProcessExplorer
             this.button1.TabIndex = 9;
             this.button1.Text = "Actualiser";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.RefreshButton);
             // 
-            // Form1
+            // ProcessExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +101,10 @@ namespace ProcessExplorer
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(406, 355);
-            this.Name = "Form1";
+            this.Name = "ProcessExplorer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple Process Explorer";
+            this.Load += new System.EventHandler(this.AppLoading);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
